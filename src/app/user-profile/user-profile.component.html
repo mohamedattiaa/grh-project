@@ -1,0 +1,223 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Edit Profile</h4>
+            <p class="card-category">Complete your profile</p>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+              <!-- Collaborator Information -->
+              <div class="row">
+                <div class="col-md-3">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Full Name" formControlName="fullname">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Email" type="email" formControlName="email">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Address" type="text" formControlName="address">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="N° CIN" type="text" formControlName="cin">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="N° du Compte" type="text" formControlName="accountNumber">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="N° Sécurité Sociale" type="text" formControlName="socialSecurityNumber">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Date de Naissance" type="date" formControlName="dateOfBirth">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="N° Téléphone" type="text" formControlName="phoneNumber">
+                  </mat-form-field>
+                </div>
+                <!-- Qualifications -->
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Nature d'Étude" type="text" formControlName="studyNature">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Certifications" type="text" formControlName="certifications">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Niveau d'Étude" type="text" formControlName="educationLevel">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Années d'Expérience" type="number" formControlName="yearsOfExperience">
+                  </mat-form-field>
+                </div>
+
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <mat-select placeholder="Type de Contrat" formControlName="contractType">
+                      <mat-option value="CDI">CDI</mat-option>
+                      <mat-option value="CDD">CDD</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Salaire de Base" type="number" formControlName="baseSalary">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Avantages sur le Salaire" type="text" formControlName="salaryBenefits">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Date de Début de Contrat" type="date" formControlName="contractStartDate">
+                  </mat-form-field>
+                </div>
+
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Département" type="text" formControlName="department">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Poste" type="text" formControlName="position">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Responsable" type="text" formControlName="supervisor">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <!-- New Section: Pièces Jointes -->
+              <div class="row">
+                <div class="col-md-12">
+                  <h5>Pièces Jointes</h5>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Document</th>
+                        <th>Généré Automatiquement</th>
+                        <th>Obligatoire</th>
+                        <th>Statut</th>
+                        <th>Upload</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Example Row 1 -->
+                      <tr>
+                        <td>CIN</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>
+                          <mat-checkbox formControlName="status1">Upload</mat-checkbox>
+                        </td>
+                        <td>
+                          <input type="file" formControlName="file1">
+                        </td>
+                      </tr>
+                      <!-- Example Row 2 -->
+                      <tr>
+                        <td>Diplôme</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>
+                          <mat-checkbox formControlName="status2">Upload</mat-checkbox>
+                        </td>
+                        <td>
+                          <input type="file" formControlName="file2">
+                        </td>
+                      </tr>
+                      <!-- Add more rows as necessary -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              <!-- Additional fields can be added here if needed -->
+                
+              <div class="row">
+                <!-- Checkbox for Recommendation -->
+                <div class="col-md-6">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" formControlName="recommendation">
+                      <span class="form-check-sign">
+                        <span class="check"></span>
+                      </span>
+                      Recommendation
+                    </label>
+                  </div>
+                </div>
+              
+                <!-- Text Field for Collaborateur -->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="collaborateur">Collaborateur</label>
+                    <input type="text" class="form-control" id="collaborateur" formControlName="collaborator" placeholder="Nom du Collaborateur">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <!-- Text Area for Commentaire -->
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="commentaire">Commentaire</label>
+                    <textarea class="form-control" id="commentaire" formControlName="comment" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-danger">Update Profile</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

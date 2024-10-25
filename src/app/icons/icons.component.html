@@ -1,0 +1,197 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="card card-plain">
+        <div class="card-header card-header-danger">
+          <h4 class="card-title">Edit Employee Details</h4>
+          <p class="card-category">Modify the employee details below</p>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card-body">
+              <form [formGroup]="profileForm" (ngSubmit)="updateEmployee()">
+                <!-- Full Name and Email -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="fullname">Full Name</label>
+                      <input id="fullname" formControlName="fullname" class="form-control" placeholder="Full Name" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input id="email" formControlName="email" class="form-control" placeholder="Email" disabled />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Address and Phone Number -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="address">Address</label>
+                      <input id="address" formControlName="address" class="form-control" placeholder="Address" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="phone">Phone Number</label>
+                      <input id="phone" formControlName="phoneNumber" class="form-control" placeholder="Phone Number" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- CIN and Account Number -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="cin">CIN</label>
+                      <input id="cin" formControlName="cin" class="form-control" placeholder="CIN" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="accountNumber">Account Number</label>
+                      <input id="accountNumber" formControlName="accountNumber" class="form-control" placeholder="Account Number" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Social Security Number and Date of Birth -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="socialSecurityNumber">Social Security Number</label>
+                      <input id="socialSecurityNumber" formControlName="socialSecurityNumber" class="form-control" placeholder="Social Security Number" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="dateOfBirth">Date of Birth</label>
+                      <input type="date" id="dateOfBirth" formControlName="dateOfBirth" class="form-control" placeholder="Date of Birth" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Study Nature and Certifications -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="studyNature">Study Nature</label>
+                      <input id="studyNature" formControlName="studyNature" class="form-control" placeholder="Study Nature" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="certifications">Certifications</label>
+                      <input id="certifications" formControlName="certifications" class="form-control" placeholder="Certifications" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Education Level and Years of Experience -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="educationLevel">Education Level</label>
+                      <input id="educationLevel" formControlName="educationLevel" class="form-control" placeholder="Education Level" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="yearsOfExperience">Years of Experience</label>
+                      <input id="yearsOfExperience" formControlName="yearsOfExperience" class="form-control" placeholder="Years of Experience" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Contract Type and Base Salary -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="contractType">Contract Type</label>
+                      <input id="contractType" formControlName="contractType" class="form-control" placeholder="Contract Type" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="baseSalary">Base Salary</label>
+                      <input id="baseSalary" formControlName="baseSalary" class="form-control" placeholder="Base Salary" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Salary Benefits and Contract Start Date -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="salaryBenefits">Salary Benefits</label>
+                      <input id="salaryBenefits" formControlName="salaryBenefits" class="form-control" placeholder="Salary Benefits" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="contractStartDate">Contract Start Date</label>
+                      <input type="date" id="contractStartDate" formControlName="contractStartDate" class="form-control" placeholder="Contract Start Date" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Department and Position -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="department">Department</label>
+                      <input id="department" formControlName="department" class="form-control" placeholder="Department" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="position">Position</label>
+                      <input id="position" formControlName="position" class="form-control" placeholder="Position" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Supervisor and Collaborator -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="supervisor">Supervisor</label>
+                      <input id="supervisor" formControlName="supervisor" class="form-control" placeholder="Supervisor" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="collaborator">Collaborator</label>
+                      <input id="collaborator" formControlName="collaborator" class="form-control" placeholder="Collaborator" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Recommendation and Comments -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="recommendation">Recommendation</label>
+                      <input type="checkbox" id="recommendation" formControlName="recommendation" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="comment">Comments</label>
+                      <textarea id="comment" formControlName="comment" class="form-control" placeholder="Comments"></textarea>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-danger">Update Employee</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

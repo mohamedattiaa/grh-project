@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>Edit Employee</h2>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input formControlName="fullname" id="fullname" class="form-control" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input formControlName="email" id="email" class="form-control" type="email" />
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input formControlName="address" id="address" class="form-control" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="cin">CIN</label>
+            <input formControlName="cin" id="cin" class="form-control" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="accountNumber">Account Number</label>
+            <input formControlName="accountNumber" id="accountNumber" class="form-control" type="text" />
+          </div>
+          <!-- Additional fields here -->
+          <div class="form-group">
+            <button type="submit" class="btn btn-success" [disabled]="!employeeForm.valid">Update</button>
+            <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

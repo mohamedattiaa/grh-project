@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  thead th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  .upload-section {
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  mat-icon {
+    font-size: 24px;
+  }
+  

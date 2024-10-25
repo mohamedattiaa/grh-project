@@ -1,0 +1,42 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Employee Table</h4>
+            <p class="card-category">Here is a list of employees</p>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="text-primary">
+                  <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>N° du Compte</th>
+                    <th>Type de Contrat</th>
+                    <th> Actions </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let employee of employees">
+                    <td>{{ employee.id }}</td>
+                    <td>{{ employee.fullname }}</td>
+                    <td>{{ employee.email }}</td>
+                    <td>{{ employee.accountNumber }}</td>
+                    <td>{{ employee.contractType }}</td>
+                    <td> <button class="btn btn-primary" (click)="editEmployee(employee.id)">Edit</button>
+                      <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
